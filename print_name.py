@@ -1,0 +1,1 @@
+print("Oteri Tega Joy")
