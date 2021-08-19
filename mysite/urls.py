@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from resume import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Resume URLs
-    path("", include("resume.urls"))
+    path("", include("resume.urls")),
+
+    # Send Message URL
+    path("send-message/", views.send_message, name="send_message")
 ]
